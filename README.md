@@ -1,2 +1,2 @@
 # Auto-DXCC
-Auto-DXCC: a tool for automatic completion of ARRL's DXCC
+A tool for automatic retrieval of ARRL DXCC Standings for one or more callsigns.
