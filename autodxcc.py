@@ -1,4 +1,4 @@
-## AUTODXCC v2.0 - 24/07/2025 ##
+## AUTODXCC - 24/07/2025 ##
 # Daniel R. Martins (danielrmartins00@gmail.com)
 
 import pandas as pd
@@ -129,13 +129,15 @@ def main():
     script_directory = os.path.dirname(os.path.abspath(__file__))
     output_file_path = os.path.join(script_directory, f"{timestamp}-autodxcc-report.xlsx")
 
-    excel_file_name = input("Enter the callsigns file name (Excel file): ").strip() # with or without .xlsx
-    if not excel_file_name.lower().endswith(".xlsx"):
-        excel_file_name += ".xlsx"
-    excel_file_path = os.path.join(script_directory, excel_file_name)    
-    if not os.path.isfile(excel_file_path):
-        print(f"Error: The file {excel_file_name} does not exist in the current directory.")
-        return
+    while True:
+        excel_file_name = input("Enter the callsigns file name (Excel file): ").strip() # with or without .xlsx
+        if not excel_file_name.lower().endswith(".xlsx"):
+            excel_file_name += ".xlsx"
+        excel_file_path = os.path.join(script_directory, excel_file_name)
+        if not os.path.isfile(excel_file_path):
+            print(f"Error: The file '{excel_file_name}' does not exist in the current directory. Please try again.")
+            continue
+        break
     
     callsigns_df = pd.read_excel(excel_file_path)
     callsigns = callsigns_df['CALL'].tolist()
