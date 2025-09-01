@@ -4,10 +4,8 @@ echo pandas
 python -m pip install --quiet pandas
 echo requests
 python -m pip install --quiet requests
-echo fitz
-python -m pip install --quiet fitz
-echo shutil
-python -m pip install --quiet shutil
+echo PyMuPDF
+python -m pip install --quiet pymupdf
 
 echo.
 echo Running the script...
