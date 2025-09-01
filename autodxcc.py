@@ -143,9 +143,7 @@ def main():
     callsigns = callsigns_df['CALL'].tolist()
 
     pdf_folder = os.path.join(script_directory, 'pdfs')
-    if not os.path.isdir(pdf_folder):
-        print(f"Error: The 'pdfs' folder does not exist in {script_directory}.")
-        return
+    os.makedirs(pdf_folder, exist_ok=True)
 
     download_standings(timestamp, pdf_folder)
     process_pdfs_and_callsigns(pdf_folder, callsigns, output_file_path)
