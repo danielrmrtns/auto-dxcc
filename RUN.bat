@@ -2,10 +2,6 @@
 echo Installing dependencies...
 echo pandas
 python -m pip install --quiet pandas
-echo PyMuPDF
-python -m pip install --quiet PyMuPDF
-echo openpyxl
-python -m pip install --quiet openpyxl
 echo requests
 python -m pip install --quiet requests
 echo fitz
