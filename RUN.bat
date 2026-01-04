@@ -6,6 +6,8 @@ echo requests
 python -m pip install --quiet requests
 echo PyMuPDF
 python -m pip install --quiet pymupdf
+echo openpyxl
+python -m pip install --quiet openpyxl
 
 echo.
 echo Running the script...
