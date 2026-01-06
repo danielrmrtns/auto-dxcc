@@ -11,4 +11,4 @@ A tool for automatically retrieving [ARRL DXCC Standings](https://www.arrl.org/d
    `RUN.bat`
 
 2. When prompted, enter the callsign list file name, including the `.xlsx` extension  
-   (for example: `example_callsigns.xlsx`)
+   (for example: `callsigns.xlsx`)
